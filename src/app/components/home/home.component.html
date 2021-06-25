@@ -1,0 +1,19 @@
+<section>
+    <div>
+        <h4>The Home Page</h4>
+    </div>
+    <div class="container">
+        <div class="Row" >
+        <div class="col mb-3" *ngFor="let article of articles" >
+            <div class="card" style="width: 90%; padding:5px;">
+                <img src={{article.urlToImage}} class="card-img-top" style="height: 200px;" alt="...">
+                <div class="card-body">
+                    <h5 class="card-title">{{article.title | slice:0:20}}...</h5>
+                    <p class="card-text">{{article.content  | slice:0:100}}...</p>
+                    <a href="#" [routerLink]="['/news/article']" [state]="{data:article}" class="btn btn-primary">Read more</a>
+                </div>
+            </div>
+          </div>
+        </div>
+    </div>
+</section>

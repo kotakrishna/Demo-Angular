@@ -1,0 +1,15 @@
+.Row {
+  display: grid;
+  grid-template-columns: 30% 30% 30%;
+  grid-column-gap: 5%;
+}
+@media only screen and (max-width: 500px) {
+  .Row {
+    grid-template-columns: 1fr;
+  }
+}
+@media only screen and (max-width: 1000px) {
+  .Row {
+    grid-template-columns: 50% 50%;
+  }
+}
